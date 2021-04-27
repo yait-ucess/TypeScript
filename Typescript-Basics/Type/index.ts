@@ -18,7 +18,7 @@ const fruits = ['Apple', 'Banana', 'Grape'];
 
 const book: [string, number, boolean] = ['business', 1500, false];
 book.push(20);
-console.log(book[3])
+console.log(book[2]);
 
 enum CoffeeSize {
   SHORT,
@@ -33,3 +33,12 @@ const coffee = {
 }
 
 coffee.size = CoffeeSize.SHORT;
+
+let anything: any = true;
+anything = 'hello';
+anything = ['hello', 20, true];
+anything = {};
+
+let banana = 'banana';
+banana = anything;
+console.log(banana);
