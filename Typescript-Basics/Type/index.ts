@@ -42,3 +42,6 @@ anything = {};
 let banana = 'banana';
 banana = anything;
 console.log(banana);
+
+let unionType: number | string = 10;
+let unionTypes: (number | string)[] = [20, 'hello'];
