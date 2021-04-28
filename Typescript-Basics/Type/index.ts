@@ -45,3 +45,16 @@ console.log(banana);
 
 let unionType: number | string = 10;
 let unionTypes: (number | string)[] = [20, 'hello'];
+
+type ClothSize = 'small' | 'medium' | 'large';
+
+const apple = 'apple';
+let clothSize: ClothSize = 'medium';
+
+const cloth: {
+  color: string;
+  size: 'small' | 'medium' | 'large'
+} = {
+  color: 'white',
+  size: 'medium'
+}
