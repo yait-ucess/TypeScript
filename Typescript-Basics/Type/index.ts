@@ -67,3 +67,7 @@ function sayHello(): void {
 
 
 let tmp: undefined;
+let tmpNull: null = null;
+let tmpNull2: null = undefined;
+let tmpUndefined: undefined = undefined;
+let tmpUndefined2: undefined = null;
