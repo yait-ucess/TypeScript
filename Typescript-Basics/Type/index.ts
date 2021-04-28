@@ -18,7 +18,6 @@ const fruits = ['Apple', 'Banana', 'Grape'];
 
 const book: [string, number, boolean] = ['business', 1500, false];
 book.push(20);
-console.log(book[2]);
 
 enum CoffeeSize {
   SHORT,
@@ -41,7 +40,6 @@ anything = {};
 
 let banana = 'banana';
 banana = anything;
-console.log(banana);
 
 let unionType: number | string = 10;
 let unionTypes: (number | string)[] = [20, 'hello'];
@@ -63,4 +61,9 @@ function add(num1: number, num2: number): number {
   return num1 + num2
 }
 
-add(3, 2);
+function sayHello(): void {
+  console.log('Hello!');
+}
+
+
+let tmp: undefined;

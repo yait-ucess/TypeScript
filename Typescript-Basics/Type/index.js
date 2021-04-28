@@ -34,4 +34,19 @@ anything = ['hello', 20, true];
 anything = {};
 var banana = 'banana';
 banana = anything;
-console.log(anything);
+console.log(banana);
+var unionType = 10;
+var unionTypes = [20, 'hello'];
+var apple = 'apple';
+var clothSize = 'medium';
+var cloth = {
+    color: 'white',
+    size: 'medium'
+};
+function add(num1, num2) {
+    return num1 + num2;
+}
+function sayHello() {
+    console.log('Hello!');
+}
+console.log(sayHello());
