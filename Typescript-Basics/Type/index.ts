@@ -86,3 +86,25 @@ function doubleAndHandle(num: number, cb: (num: number) => number): void {
 doubleAndHandle(20, doubleNum => {
   return doubleNum
 });
+
+let anyInput: any;
+let text: string;
+
+let unknownInput: unknown;
+
+unknownInput = 'hello';
+unknownInput = 20;
+unknownInput = true;
+
+if(typeof unknownInput === 'string') {
+  text = unknownInput;
+}
+
+function error(message: string): never {
+  throw new Error(message);
+  while (true) {
+    
+  }
+}
+
+console.log(error('This is error messages'));

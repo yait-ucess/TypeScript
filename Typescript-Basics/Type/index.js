@@ -15,7 +15,6 @@ var person = {
 var fruits = ['Apple', 'Banana', 'Grape'];
 var book = ['business', 1500, false];
 book.push(20);
-console.log(book[2]);
 var CoffeeSize;
 (function (CoffeeSize) {
     CoffeeSize[CoffeeSize["SHORT"] = 0] = "SHORT";
@@ -34,7 +33,6 @@ anything = ['hello', 20, true];
 anything = {};
 var banana = 'banana';
 banana = anything;
-console.log(banana);
 var unionType = 10;
 var unionTypes = [20, 'hello'];
 var apple = 'apple';
@@ -49,4 +47,32 @@ function add(num1, num2) {
 function sayHello() {
     console.log('Hello!');
 }
-console.log(sayHello());
+var tmp;
+var tmpNull = null;
+var tmpNull2 = undefined;
+var tmpUndefined = undefined;
+var tmpUndefined2 = null;
+var anotherAdd = function add(num1, num2) {
+    return num1 + num2;
+};
+var doubleNumber = function (number) { return number * 2; };
+function doubleAndHandle(num, cb) {
+    var doubleNum = cb(num * 2);
+    console.log(doubleNum);
+}
+doubleAndHandle(20, function (doubleNum) {
+    return doubleNum;
+});
+var anyInput;
+var text;
+var unknownInput;
+unknownInput = 'hello';
+unknownInput = 20;
+unknownInput = true;
+if (typeof unknownInput === 'string') {
+    text = unknownInput;
+}
+function error(message) {
+    throw new Error(message);
+}
+console.log('This is error messages');
