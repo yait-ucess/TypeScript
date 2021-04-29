@@ -70,6 +70,7 @@ let tmp: undefined;
 let tmpNull: null = null;
 let tmpUndefined: undefined = undefined;
 
+
 const anotherAdd = function add(num1: number, num2: number) {
   return num1 + num2
 }
