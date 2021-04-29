@@ -1,3 +1,4 @@
+"use strict";
 var hasValue = true;
 var count = 10;
 var float = 3.14;
@@ -49,9 +50,7 @@ function sayHello() {
 }
 var tmp;
 var tmpNull = null;
-var tmpNull2 = undefined;
 var tmpUndefined = undefined;
-var tmpUndefined2 = null;
 var anotherAdd = function add(num1, num2) {
     return num1 + num2;
 };
@@ -74,5 +73,7 @@ if (typeof unknownInput === 'string') {
 }
 function error(message) {
     throw new Error(message);
+    while (true) {
+    }
 }
-console.log('This is error messages');
+console.log(error('This is error messages'));
