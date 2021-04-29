@@ -1,2 +1,3 @@
-let hi = 32;
-console.log(hi.toUpperCase());
+function echo(message) {
+  return message;
+}
