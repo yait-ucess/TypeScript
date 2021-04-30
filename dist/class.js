@@ -1,16 +1,16 @@
 class Person {
-    constructor(initName) {
+    constructor(initName, initAge) {
         this.name = initName;
+        this.age = initAge;
+    }
+    incrementAge() {
+        this.age += 1;
     }
     greeting() {
-        console.log(`Hello! My name is ${this.name}`);
+        console.log(`Hello! My name is ${this.name}. I am ${this.age} years old.`);
     }
 }
 let person2;
-const quill = new Person('Quill');
+const quill = new Person('Quill', 38);
+quill.incrementAge();
 quill.greeting();
-const anotherQuill = {
-    name: 'anotherQuill',
-    greeting: quill.greeting
-};
-anotherQuill.greeting();
