@@ -68,9 +68,8 @@ function sayHello(): void {
 
 let tmp: undefined;
 let tmpNull: null = null;
-let tmpNull2: null = undefined;
 let tmpUndefined: undefined = undefined;
-let tmpUndefined2: undefined = null;
+
 
 const anotherAdd = function add(num1: number, num2: number) {
   return num1 + num2
