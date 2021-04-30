@@ -1,5 +1,7 @@
-function echo(message: string) {
-  return message;
+function echo(message: string): string | undefined {
+  if (message) {
+    return message;
+  }
 }
 
 let nullableMessage: string = null;
