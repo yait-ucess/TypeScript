@@ -1,5 +1,5 @@
 class Person {
-  constructor(public readonly name: string, private readonly age: number;) {
+  constructor(public readonly name: string, protected readonly age: number;) {
   }
 
   incrementAge() {
