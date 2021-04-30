@@ -3,10 +3,10 @@ function echo(message) {
         return message;
     }
 }
-var nullableMessage = null;
-var undefinedableMessage = undefined;
-var onlyNull = undefined;
-var onlyUndefined = null;
+let nullableMessage = null;
+let undefinedableMessage = undefined;
+let onlyNull = undefined;
+let onlyUndefined = null;
 if (nullableMessage) {
     nullableMessage.toUpperCase();
 }

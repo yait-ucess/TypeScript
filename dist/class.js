@@ -1,8 +1,16 @@
-var Person = /** @class */ (function () {
-    function Person(initName) {
+class Person {
+    constructor(initName) {
         this.name = initName;
     }
-    return Person;
-}());
-var quill = new Person('Quill');
-console.log(quill);
+    greeting() {
+        console.log(`Hello! My name is ${this.name}`);
+    }
+}
+let person2;
+const quill = new Person('Quill');
+quill.greeting();
+const anotherQuill = {
+    name: 'anotherQuill',
+    greeting: quill.greeting
+};
+anotherQuill.greeting();
