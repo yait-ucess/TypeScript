@@ -1,3 +1,7 @@
+interface addFunc {
+  (num1: number, num2: number): number;
+}
+
 interface Nameable {
   name: string;
 }
