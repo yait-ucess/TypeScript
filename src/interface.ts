@@ -1,5 +1,7 @@
+
+
 interface Human {
-  name: string;
+  readonly name: string;
   age: number;
   greeting(message: string): void;
 }
