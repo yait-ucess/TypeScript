@@ -84,3 +84,19 @@ const designer: Designer = {
   name: 'Quill',
   1: 'Operator',
 }
+
+interface DownloadedData {
+  id: number;
+  user?: {
+    name?: {
+      first: string;
+      last: string;
+    }
+  };
+}
+
+const downloadedData: DownloadedData = {
+  id: 1
+}
+
+console.log(downloadedData.user?.name?.first);
