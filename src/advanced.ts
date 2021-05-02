@@ -68,4 +68,4 @@ function havepet(pet: Pet) {
   }
 }
 
-const input = document.getElementById('input') as HTMLInputElement;
+const input = document.getElementById('input')!;
