@@ -1,6 +1,8 @@
+const nameable = {
+    name: 'Quill'
+};
 class Developer {
-    constructor(name, age, experience) {
-        this.name = name;
+    constructor(age, experience) {
         this.age = age;
         this.experience = experience;
     }
@@ -16,4 +18,3 @@ const tmpDeveloper = {
         console.log(message);
     }
 };
-const user = tmpDeveloper;
