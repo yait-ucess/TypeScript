@@ -21,12 +21,17 @@ type NumberBoolean = number | boolean;
 type StringNumber = string | number;
 type Mix = NumberBoolean & StringNumber;
 
-function toUpperCase(x: string | number) {
+function toUpperCase(x: string): string;
+function toUpperCase(x: number): number;
+
+function toUpperCase(x: string | number):string | number {
   if (typeof x === 'string') {
     return x.toUpperCase();
   }
-  return '';
+  return x;
 }
+
+const upperHello = toUpperCase('Hello');
 
 type NomadWorker = Engineer | Blogger;
 
@@ -78,7 +83,4 @@ interface Designer {
 const designer: Designer = {
   name: 'Quill',
   1: 'Operator',
-  role: 'Illustrator'
 }
-
-designer.role = 'Illustrator';
