@@ -132,3 +132,10 @@
 function advanceFn(...args: readonly [number, string, boolean, ...number[]]) {
 }
 advanceFn(0, 'web', true, 0, 1, 2, 3);
+
+let milk = 'milk' as const;
+const array = [10, 20] as const;
+const peter = {
+  name: 'peter',
+  age: 38
+}
