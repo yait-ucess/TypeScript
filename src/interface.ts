@@ -3,7 +3,7 @@ interface addFunc {
 }
 
 interface Nameable {
-  name?: string;
+  name: string;
   nickName?: string;
 }
 
@@ -18,7 +18,7 @@ interface Human extends Nameable {
 }
 
 class Developer implements Human{
-  name?: string;
+  name: string;
   constructor(public age: number, public experience: number) {}
   greeting(message?: string) {
     console.log(message);
