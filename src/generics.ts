@@ -49,10 +49,15 @@
 
 // let tmp2: ResponseData;
 
-interface Vegetables {
-  readonly tomato: string;
-  readonly pumpkin: string;
-}
-type MappedTypes <T> = {
-  -readonly [P in keyof Vegetables ]-?: P;
-}
+// interface Vegetables {
+//   readonly tomato: string;
+//   readonly pumpkin: string;
+// }
+// type MappedTypes <T> = {
+//   -readonly [P in keyof Vegetables ]-?: P;
+// }
+
+type ConditionalTypes = 'tomato' extends string ? number : boolean;
+type ConditionalTypesInfer = { tomato: 'tomato' } extends { tomato: infer R } ? R : boolean;
+type DistributiveConditionalTypes<T> = T extends 'tomato' ? number : boolean;
+let tmp3: DistributiveConditionalTypes<'tomato' | 'pumpkin'>;
