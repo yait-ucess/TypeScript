@@ -42,9 +42,17 @@
 // type ToDoable = Partial<ToDo>
 // type ReadTodo = Readonly<ToDo>
 
-interface ResponseData<T = any> {
-  data: T;
-  status: number;
-}
+// interface ResponseData<T = any> {
+//   data: T;
+//   status: number;
+// }
 
-let tmp2: ResponseData;
+// let tmp2: ResponseData;
+
+interface Vegetables {
+  tomato: string;
+  pumpkin: string;
+}
+type MappedTypes = {
+  [P in 'tomato' | 'pumpkin']: P;
+}
