@@ -138,4 +138,6 @@ const array = [10, 20] as const;
 const peter = {
   name: 'peter',
   age: 38
-}
+} as const;
+
+type PeterType = peter;
