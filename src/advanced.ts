@@ -30,8 +30,22 @@ function toUpperCase(x: string | number):string | number {
   }
   return x;
 }
+interface TmpFunc {
+  (x: string): number;
+  (x: number): number;
+}
+const upperHello: TmpFunc = function(x: string | number) { return 0 };
 
-const upperHello = toUpperCase('Hello');
+interface FuncA {
+  (a: number, b: string): number;
+  (a: string, b: number): number;
+}
+
+interface FuncB {
+  (a: string): number;
+}
+
+let intersectionFunc: FuncA & FuncB;
 
 type NomadWorker = Engineer | Blogger;
 
