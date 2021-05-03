@@ -34,10 +34,17 @@
 //   data: [20]
 // }
 
-interface ToDo {
-  title: string;
-  text: string;
+// interface ToDo {
+//   title: string;
+//   text: string;
+// }
+
+// type ToDoable = Partial<ToDo>
+// type ReadTodo = Readonly<ToDo>
+
+interface ResponseData<T = any> {
+  data: T;
+  status: number;
 }
 
-type ToDoable = Partial<ToDo>
-type ReadTodo = Readonly<ToDo>
+let tmp2: ResponseData;
