@@ -129,7 +129,6 @@
 // const userData = downloadedData.user ?? 'no-user';
 // type id = DownloadedData['id' | 'user'];
 
-function advanceFn(...args: [number, string, boolean, ...number[]]) {
-  args[0];
+function advanceFn(...args: readonly [number, string, boolean, ...number[]]) {
 }
 advanceFn(0, 'web', true, 0, 1, 2, 3);
