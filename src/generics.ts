@@ -24,12 +24,20 @@
 // stringLightDataBase.remove('Apple');
 // console.log(stringLightDataBase.get());
 
-interface TmpDataBase<T> {
-  id: number;
-  data: T[];
+// interface TmpDataBase<T> {
+//   id: number;
+//   data: T[];
+// }
+
+// const tmpDataBase: TmpDataBase<number> = {
+//   id: 3,
+//   data: [20]
+// }
+
+interface ToDo {
+  title: string;
+  text: string;
 }
 
-const tmpDataBase: TmpDataBase<number> = {
-  id: 3,
-  data: [20]
-}
+type ToDoable = Partial<ToDo>
+type ReadTodo = Readonly<ToDo>
