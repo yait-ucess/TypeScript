@@ -105,6 +105,7 @@
 // const userData = downloadedData.user ?? 'no-user';
 // type id = DownloadedData['id' | 'user'];
 function advanceFn(...args) {
+    console.log();
 }
 advanceFn(0, 'web', true, 0, 1, 2, 3);
 let milk = 'milk';
