@@ -50,9 +50,9 @@
 // let tmp2: ResponseData;
 
 interface Vegetables {
-  tomato: string;
-  pumpkin: string;
+  readonly tomato: string;
+  readonly pumpkin: string;
 }
-type MappedTypes = {
-  [P in 'tomato' | 'pumpkin']: P;
+type MappedTypes <T> = {
+  -readonly [P in keyof Vegetables ]-?: P;
 }
