@@ -5,7 +5,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 function Logging(message) {
-    console.log('Logging Factory');
     return function (constructor) {
         console.log(message);
         console.log(constructor);
@@ -14,22 +13,37 @@ function Logging(message) {
 function Component(template, selector) {
     console.log('Component Factory');
     return function (constructor) {
-        const mountedElement = document.querySelector(selector);
-        console.log('Component');
-        const instance = new constructor();
-        if (mountedElement) {
-            mountedElement.innerHTML = template;
-            mountedElement.querySelector('h1').textContent = instance.name;
-        }
+        return class extends constructor {
+            constructor(...args) {
+                super(...args);
+                const mountedElement = document.querySelector(selector);
+                const instance = new constructor();
+                if (mountedElement) {
+                    mountedElement.innerHTML = template;
+                    mountedElement.querySelector('h1').textContent = instance.name;
+                }
+            }
+        };
     };
 }
+console.dir(Logging);
+function PropertyLogging(target, propertyKey) {
+    console.log('PropertyLogging');
+    console.log(target);
+    console.log(propertyKey);
+}
 let User = class User {
-    constructor() {
+    constructor(age) {
+        this.age = age;
         this.name = 'Quill';
         console.log('User was created!');
     }
 };
+__decorate([
+    PropertyLogging
+], User.prototype, "name", void 0);
 User = __decorate([
     Logging('Logging User'),
     Component('<h1>{{ name }}</h1>', '#app')
 ], User);
+const user1 = new User(20);
