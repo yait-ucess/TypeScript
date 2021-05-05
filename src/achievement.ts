@@ -16,12 +16,13 @@ class Score implements Scoreable {
   private static instance: Score; 
   get totalScore() {
     const achieveList = AchieveList.getInstance();
-    return achieveList.activeElementsScore.reduce((total, score) => total + score, 0)
+    return achieveList.activeElementsScore.reduce((total, score) => total + score, 0);
   }
 
   render() {
     document.querySelector('.score__number')!.textContent = String(this.totalScore);
   }
+
   private constructor() {}
   static getInstance() {
     if (!Score.instance) {
@@ -39,6 +40,10 @@ class Achieve implements Achieveable {
     this.element.classList.toggle('achieve--active');
     const score = Score.getInstance();
     score.render();
+    if (score.totalScore >= 15) {
+      alert('おめでとう！  今日も頑張ったね！');
+    }
+    this.element.classList.toggle('achieve--end');
   }
 }
 

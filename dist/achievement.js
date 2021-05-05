@@ -24,6 +24,10 @@ class Achieve {
         this.element.classList.toggle('achieve--active');
         const score = Score.getInstance();
         score.render();
+        if (score.totalScore >= 15) {
+            alert('おめでとう！  今日も頑張ったね！');
+        }
+        this.element.classList.toggle('achieve--end');
     }
 }
 class AchieveList {
