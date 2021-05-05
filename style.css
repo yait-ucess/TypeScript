@@ -6,16 +6,16 @@ body {
   padding-bottom: 5rem;
   text-align: center;
 }
-.foods-container {
+.achieve-container {
   display: flex;
   justify-content: center;
 }
-.foods {
+.achieve-list {
   display: flex;
   flex-wrap: wrap;
   width: 80%;
 }
-.food {
+.achieve {
   align-items: center;
   background-color: white;
   border-radius: 5px;
@@ -27,16 +27,16 @@ body {
   opacity: 0.7;
   padding: 1rem;
 }
-.food:hover {
+.achieve:hover {
   box-shadow: 0 2px 5px rgba(0,0,0,0.26)
 }
-.food--active {
+.achieve--active {
   opacity: 1;
 }
-.food__name {
+.achieve__name {
   cursor: pointer;
 }
-.food__score {
+.achieve__score {
   cursor: pointer;
   font-size: 2rem;
   margin-left: 1rem;
