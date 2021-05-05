@@ -1,4 +1,18 @@
-class Score {
+interface Scoreable {
+  readonly totalScore: number;
+  render(): void;
+}
+interface Achieveable {
+  element: HTMLDivElement;
+  clickEventHandler(): void;
+}
+interface AchieveListable {
+  elements: NodeListOf<HTMLDivElement>;
+  readonly activeElements: HTMLDivElement[];
+  readonly activeElementsScore: number[];
+}
+
+class Score implements Scoreable {
   private static instance: Score; 
   get totalScore() {
     const achieveList = AchieveList.getInstance();
@@ -17,7 +31,7 @@ class Score {
   }
 }
 
-class Achieve {
+class Achieve implements Achieveable {
   constructor(public element: HTMLDivElement) {
     element.addEventListener('click', this.clickEventHandler.bind(this))
   }
@@ -28,7 +42,7 @@ class Achieve {
   }
 }
 
-class AchieveList {
+class AchieveList implements AchieveListable {
   private static instance: AchieveList;
   elements = document.querySelectorAll<HTMLDivElement>('.achieve');
   private _activeElements: HTMLDivElement[] = [];
