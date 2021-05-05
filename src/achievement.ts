@@ -1,5 +1,20 @@
 class Score {
+  private static instance: Score; 
+  get totalScore() {
+    const achieveList = AchieveList.getInstance();
+    return achieveList.activeElementsScore.reduce((total, score) => total + score, 0)
+  }
 
+  render() {
+    document.querySelector('.score__number')!.textContent = String(this.totalScore);
+  }
+  private constructor() {}
+  static getInstance() {
+    if (!Score.instance) {
+      Score.instance = new Score();
+    }
+    return Score.instance;
+  }
 }
 
 class Achieve {
@@ -7,13 +22,17 @@ class Achieve {
     element.addEventListener('click', this.clickEventHandler.bind(this))
   }
   clickEventHandler() {
-    this.element.classList.toggle('achieve--active')
+    this.element.classList.toggle('achieve--active');
+    const score = Score.getInstance();
+    score.render();
   }
 }
 
 class AchieveList {
+  private static instance: AchieveList;
   elements = document.querySelectorAll<HTMLDivElement>('.achieve');
   private _activeElements: HTMLDivElement[] = [];
+  private _activeElementsScore: number[] = [];
   get activeElements() {
     this._activeElements = [];
     this.elements.forEach(element => {
@@ -23,11 +42,29 @@ class AchieveList {
     })
     return this._activeElements;
   }
-  constructor() {
+
+  get activeElementsScore() {
+    this._activeElementsScore = [];
+    this.activeElements.forEach(element => {
+      const achieveScore = element.querySelector('.achieve__score');
+      if (achieveScore) {
+        this._activeElementsScore.push(Number(achieveScore.textContent));
+      }
+    })
+    return this._activeElementsScore;
+  }
+
+  private constructor() {
     this.elements.forEach(element => {
       new Achieve(element);
     })
   }
+  static getInstance() {
+    if (!AchieveList.instance) {
+      AchieveList.instance = new AchieveList();
+    }
+    return AchieveList.instance;
+  }
 }
 
-const achieveList = new AchieveList();
+const achieveList = AchieveList.getInstance();
