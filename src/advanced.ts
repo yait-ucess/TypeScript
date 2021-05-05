@@ -129,7 +129,8 @@
 // const userData = downloadedData.user ?? 'no-user';
 // type id = DownloadedData['id' | 'user'];
 
-function advanceFn(...args: readonly [number, string, boolean, ...number[]]) {
+function advanceFn(...args: [number, string, boolean, ...number[]]) {
+  console.log()
 }
 advanceFn(0, 'web', true, 0, 1, 2, 3);
 
@@ -140,4 +141,4 @@ const peter = {
   age: 38
 } as const;
 
-type PeterType = peter;
+type PeterType = typeof peter;
