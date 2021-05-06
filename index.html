@@ -1,15 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <script src="dist/decorator.js"x defer></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="dist/achievement.js" defer></script>
 </head>
+
 <body>
-  <div id="app">
-    <h1>Quill</h1>
-  </div>
+  <div>
+    <h1>Achievement</h1>
+    <br>
+    <div>
+      <h2>今日の達成</h2>
+      <div class="score">
+        <div class="score__circle">
+          <div class="score__number">0</div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div>
+      <h2 class="message">Let's do it!</h2>
+      <div class="achieve-container">
+        <div class="achieve-list">
+          <div class="achieve">
+            <div class="achieve__name">プログラミング</div>
+            <div class="achieve__score">+5</div>
+          </div>
+          <div class="achieve">
+            <div class="achieve__name">読書</div>
+            <div class="achieve__score">+4</div>
+          </div>
+          <div class="achieve">
+            <div class="achieve__name">風呂</div>
+            <div class="achieve__score">+3</div>
+          </div>
+          <div class="achieve">
+            <div class="achieve__name">6時間睡眠</div>
+            <div class="achieve__score">+2</div>
+          </div>
+          <div class="achieve">
+            <div class="achieve__name">筋トレ</div>
+            <div class="achieve__score">+1</div>
+          </div>
+        </div>
+      </div>
+    </div>
 </body>
+
 </html>
