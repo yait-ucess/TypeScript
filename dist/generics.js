@@ -1,3 +1,4 @@
+"use strict";
 // function copy<T extends { name: string }, U extends keyof T>(value: T, key: U): T {
 //   value[key];
 //   return value;

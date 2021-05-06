@@ -1,3 +1,4 @@
+"use strict";
 let hasValue = true;
 let count = 10;
 let float = 3.14;

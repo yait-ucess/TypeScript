@@ -1,3 +1,4 @@
+"use strict";
 // type Engineer = {
 //   name: string;
 //   role: string;
