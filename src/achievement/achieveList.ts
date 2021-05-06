@@ -1,4 +1,7 @@
-class AchieveList implements AchieveListable {
+import { AchieveListable } from "./interfaces.js";
+import { Achieve } from "./achieve.js";
+
+export class AchieveList implements AchieveListable {
   private static instance: AchieveList;
   elements = document.querySelectorAll<HTMLDivElement>('.achieve');
   private _activeElements: HTMLDivElement[] = [];

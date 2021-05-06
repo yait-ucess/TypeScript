@@ -1,5 +1,5 @@
-"use strict";
-class Score {
+import { AchieveList } from "./achieveList.js";
+export class Score {
     constructor() { }
     get totalScore() {
         const achieveList = AchieveList.getInstance();

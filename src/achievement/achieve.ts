@@ -1,4 +1,7 @@
-class Achieve implements Achieveable {
+import { Achieveable } from "./interfaces";
+import { Score } from "./score.js";
+
+export class Achieve implements Achieveable {
   constructor(public element: HTMLDivElement) {
     element.addEventListener('click', this.clickEventHandler.bind(this))
   }
@@ -6,7 +9,7 @@ class Achieve implements Achieveable {
     this.element.classList.toggle('achieve--active');
     const score = Score.getInstance();
     score.render();
-    if (score.totalScore >= 15) {
+    if (score.totalScore == 15) {
       alert('おめでとう！  今日も頑張ったね！');
     }
     this.element.classList.toggle('achieve--end');

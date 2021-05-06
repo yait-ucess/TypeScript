@@ -1,5 +1,5 @@
-"use strict";
-class AchieveList {
+import { Achieve } from "./achieve.js";
+export class AchieveList {
     constructor() {
         this.elements = document.querySelectorAll('.achieve');
         this._activeElements = [];

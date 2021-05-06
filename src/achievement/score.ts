@@ -1,4 +1,7 @@
-class Score implements Scoreable {
+import { Scoreable } from "./interfaces.js";
+import { AchieveList } from "./achieveList.js";
+
+export class Score implements Scoreable {
   private static instance: Score; 
   get totalScore() {
     const achieveList = AchieveList.getInstance();
