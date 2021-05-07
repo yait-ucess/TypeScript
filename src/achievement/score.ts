@@ -1,4 +1,4 @@
-import { Scoreable } from "./interfaces.js";
+import Scoreable from "./interfaces.js";
 import { AchieveList } from "./achieveList.js";
 
 export class Score implements Scoreable {
