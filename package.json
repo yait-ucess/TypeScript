@@ -5,11 +5,13 @@
   "main": "index.js",
   "dependencies": {
     "axios": "^0.21.1",
+    "lodash": "^4.17.21",
     "sweetalert": "^2.1.2",
     "ts-loader": "^9.1.2",
     "typescript": "^4.2.4"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.168",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "serve": "^11.3.2",
     "webpack": "^5.36.2",
