@@ -62,7 +62,7 @@
     // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
     /* Advanced Options */
     "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
-  }
+  },
   // "include": [
   //   "./src/achievement"
   // ],
@@ -71,7 +71,8 @@
   //   "*.spec.ts",
   //   "node_modules"
   // ],
-  // "files": [
-  //   "tmp/compiler.ts"
-  // ]
+  "files": [
+    "./src/library.ts",
+    "./src/lodash.d.ts"
+  ]
 }
