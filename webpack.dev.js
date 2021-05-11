@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   mode: 'development', 
-  entry: './src/achievement/main.ts',
+  entry: './src/library.ts',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
