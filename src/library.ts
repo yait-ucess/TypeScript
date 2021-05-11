@@ -23,9 +23,9 @@ hello
 // interface name {
 //   second: number
 // }
-namespace name{
-  const first: string = 'Peter';
-}
-namespace name{
-  const first: string = 'Peter';
-}
+// namespace name{
+//   const first: string = 'Peter';
+// }
+// namespace name{
+//   const first: string = 'Peter';
+// }
