@@ -11,3 +11,4 @@ namespace myApp {
 }
 
 let nameable: myApp.Nameable;
+hello
