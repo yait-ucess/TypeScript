@@ -1,4 +1,4 @@
-import express from 'express';
+import express { Request, Response, NextFunction  } from 'express';
 const app = express();
 app.use((req, res, next) => {
   next();
@@ -6,7 +6,7 @@ app.use((req, res, next) => {
 app.get('/', (req, res, next) => {
   res.send('<h1>Hello</h1>')
 })
-app.use((err, req, res, next) => {
+app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   next();
 })
 app.listen(3000);
