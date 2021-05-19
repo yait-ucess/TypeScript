@@ -1,4 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.name = void 0;
-exports.name = 'Peter';
+const person = {
+    name: 'Peter'
+};
+module.exports = person;
